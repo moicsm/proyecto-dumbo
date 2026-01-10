@@ -1,0 +1,47 @@
+# ============================================
+# FRONTEND - GITIGNORE ESPECÍFICO
+# ============================================
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+.ionic/
+
+# Environment variables (NUNCA subir!)
+.env
+.env.local
+.env.*.local
+
+# Cache
+.vite/
+.eslintcache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+*.log
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# OS
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Capacitor
+/android/
+/ios/
+*.apk
+*.ipa
+
+# Temporary
+*.tmp
+*.temp
