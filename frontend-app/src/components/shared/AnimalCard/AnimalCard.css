@@ -1,0 +1,284 @@
+/**
+ * 🐾 Animal Card Styles
+ * Beautiful cards for animal listings
+ */
+
+.animal-card {
+    margin: 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-md);
+    background: var(--card-bg);
+    cursor: pointer;
+}
+
+.animal-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* ===== IMAGE CONTAINER ===== */
+.animal-card-image-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: var(--ion-color-light);
+}
+
+.animal-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animal-card:hover .animal-card-image {
+    transform: scale(1.1);
+}
+
+/* ===== BADGES OVERLAY ===== */
+.animal-card-badges {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    z-index: 2;
+}
+
+.animal-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(10px);
+}
+
+.animal-badge ion-icon {
+    font-size: 1rem;
+}
+
+/* ===== SPECIES ICON ===== */
+.animal-species-icon {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: var(--shadow-lg);
+    z-index: 2;
+}
+
+/* ===== CONTENT ===== */
+.animal-card-content {
+    padding: var(--spacing-lg);
+}
+
+/* ===== HEADER ===== */
+.animal-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-md);
+}
+
+.animal-card-name {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ion-text-color);
+    margin: 0 0 var(--spacing-xs) 0;
+    line-height: 1.2;
+}
+
+.animal-card-breed {
+    font-size: 0.875rem;
+    color: var(--ion-color-medium);
+    margin: 0;
+}
+
+.sponsor-count {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: rgba(255, 107, 157, 0.1);
+    color: var(--ion-color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.sponsor-icon {
+    font-size: 1rem;
+    color: var(--ion-color-primary);
+}
+
+/* ===== INFO CHIPS ===== */
+.animal-card-info {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.info-chip {
+    height: auto;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.chip-label {
+    opacity: 0.7;
+    margin-right: var(--spacing-xs);
+}
+
+.chip-value {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.health-chip-success {
+    background: rgba(107, 207, 127, 0.15);
+    color: var(--ion-color-success);
+}
+
+.health-chip-warning {
+    background: rgba(255, 184, 77, 0.15);
+    color: var(--ion-color-warning);
+}
+
+.health-chip-secondary {
+    background: rgba(78, 205, 196, 0.15);
+    color: var(--ion-color-secondary);
+}
+
+/* ===== STORY PREVIEW ===== */
+.animal-card-story {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ion-color-medium);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ===== PERSONALITY TAGS ===== */
+.personality-tags {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.personality-tag {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--gradient-secondary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===== SPONSOR BUTTON (IonButton) ===== */
+.sponsor-button {
+    --background: var(--gradient-primary);
+    --background-activated: var(--gradient-primary);
+    --background-focused: var(--gradient-primary);
+    --background-hover: var(--gradient-primary);
+    --color: white;
+    --border-radius: var(--radius-full);
+    --padding-top: var(--spacing-md);
+    --padding-bottom: var(--spacing-md);
+    --padding-start: var(--spacing-lg);
+    --padding-end: var(--spacing-lg);
+    --box-shadow: var(--shadow-md);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.sponsor-button:hover {
+    transform: scale(1.02);
+    --box-shadow: var(--shadow-colored);
+}
+
+.sponsor-button:active {
+    transform: scale(0.98);
+}
+
+.sponsor-button ion-icon {
+    font-size: 1.25rem;
+}
+
+/* ===== MOBILE SPECIFIC ===== */
+.animal-card-mobile .animal-card-image-container {
+    height: 220px;
+}
+
+.animal-card-mobile .animal-card-name {
+    font-size: 1.25rem;
+}
+
+.animal-card-mobile .animal-card-story {
+    font-size: 0.875rem;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .animal-card-content {
+        padding: var(--spacing-md);
+    }
+
+    .animal-species-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+
+    .animal-card-badges {
+        top: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+}
+
+/* ===== LOADING STATE ===== */
+.animal-card.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.animal-card.loading .animal-card-image {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}

@@ -1,0 +1,53 @@
+/* Layout Base */
+.web-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scroll iOS */
+    position: relative;
+}
+
+.web-main-content {
+    flex: 1;
+    /* Empuja el footer hacia abajo */
+    width: 100%;
+}
+
+/* Utilidades para Contenido */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.page-header {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(255, 107, 157, 0.1) 100%);
+    margin-bottom: 2rem;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--ion-text-color);
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--ion-color-medium);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #4ecdc4 0%, #ff6b9d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
