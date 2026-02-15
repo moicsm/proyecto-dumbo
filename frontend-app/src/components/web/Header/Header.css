@@ -220,7 +220,6 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    gap: 8px;
     padding: 12px 28px;
     background: var(--ion-color-tertiary);
     /* Salmon Button */
@@ -244,6 +243,13 @@
 
 .donate-btn svg {
     flex-shrink: 0;
+    transition: fill 0.3s ease;
+    /* Smooth fill transition */
+}
+
+/* Fill icon on hover */
+.donate-btn:hover svg {
+    fill: white;
 }
 
 /* ===== RESPONSIVE ===== */

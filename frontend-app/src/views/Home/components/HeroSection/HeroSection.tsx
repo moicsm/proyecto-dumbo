@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
                             />
                             <div className="floating-card floating-card-1">
                                 <IonIcon icon={heartOutline} className="floating-icon" />
-                                <span>+50 Padrinos</span>
+                                <span>Segundas Oportunidades</span>
                             </div>
                             <div className="floating-card floating-card-2">
                                 <IonIcon icon={pawOutline} className="floating-icon" />
