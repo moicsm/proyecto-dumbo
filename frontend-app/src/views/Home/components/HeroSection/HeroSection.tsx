@@ -24,24 +24,14 @@ const HeroSection: React.FC = () => {
                     </p>
 
                     <div className="hero-actions">
-                        <IonButton
-                            fill="solid"
-                            size="large"
-                            color="primary"
-                            routerLink="/animales"
-                        >
-                            <IonIcon icon={pawOutline} slot="start" />
-                            Conoce a nuestros rescatados
-                        </IonButton>
-                        <IonButton
-                            fill="outline"
-                            size="large"
-                            className="hero-outline-btn"
-                            routerLink="/donar"
-                        >
+                        <a href="/donar" className="hero-btn hero-btn-outline">
                             <IonIcon icon={heartOutline} slot="start" />
                             Dona ahora
-                        </IonButton>
+                        </a>
+                        <a href="/animales" className="hero-btn hero-btn-primary">
+                            <IonIcon icon={pawOutline} slot="start" />
+                            Conoce a nuestros rescatados
+                        </a>
                     </div>
 
                     {isDesktop && (

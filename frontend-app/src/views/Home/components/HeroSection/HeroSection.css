@@ -19,21 +19,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-        url('https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1600&q=80') center/cover,
-        var(--gradient-hero);
-    background-blend-mode: overlay;
+    bottom: 0;
+    background: var(--ion-color-secondary);
+    /* Cream/Sand Color */
     z-index: -1;
 }
 
 .hero-gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--gradient-hero);
-    opacity: 0.85;
+    display: none;
+    /* Removed completely as requested */
 }
 
 /* ===== CONTENT ===== */
@@ -57,7 +51,8 @@
 
 /* ===== TEXT CONTENT ===== */
 .hero-text {
-    color: white;
+    color: var(--ion-color-primary);
+    /* Slate Blue */
 }
 
 .hero-title {
@@ -65,11 +60,15 @@
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: var(--spacing-lg);
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+    /* Remove shadow for clean look */
+    color: var(--ion-color-primary);
+    /* Slate Blue */
 }
 
 .hero-title .text-gradient {
-    background: linear-gradient(135deg, #FFD93D 0%, #4ECDC4 100%);
+    background: linear-gradient(135deg, var(--ion-color-tertiary) 0%, var(--ion-color-tertiary-shade) 100%);
+    /* Soft Coral gradient - warm accent */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -77,12 +76,14 @@
 }
 
 .hero-subtitle {
-    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    font-size: 1rem;
+    /* Standardized to 16px */
     line-height: 1.7;
     margin-bottom: var(--spacing-2xl);
-    color: rgba(255, 255, 255, 0.95);
+    color: var(--ion-color-medium);
+    /* Gray for readability */
     max-width: 600px;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-shadow: none;
 }
 
 .hero-mobile .hero-subtitle {
@@ -96,6 +97,56 @@
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-2xl);
     flex-wrap: wrap;
+}
+
+/* Standard HTML Buttons for Web Version */
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    /* Rounded pill shape */
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    border: 2px solid transparent;
+    /* Prepare for border */
+}
+
+.hero-btn ion-icon {
+    font-size: 1.3rem;
+}
+
+.hero-btn-primary {
+    background: var(--ion-color-tertiary);
+    /* Soft Coral CTA */
+    color: white;
+    box-shadow: 0 4px 12px rgba(224, 120, 86, 0.4);
+}
+
+.hero-btn-primary:hover {
+    background: var(--ion-color-tertiary-shade);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(224, 120, 86, 0.6);
+}
+
+.hero-btn-outline {
+    background: transparent;
+    color: var(--ion-color-primary);
+    /* Slate Blue */
+    border: 2px solid var(--ion-color-primary);
+}
+
+.hero-btn-outline:hover {
+    background: var(--ion-color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 73, 94, 0.3);
 }
 
 .hero-mobile .hero-actions {
@@ -133,27 +184,29 @@
     font-size: 2.5rem;
     font-weight: 900;
     font-family: var(--font-display);
-    background: linear-gradient(135deg, #FFD93D 0%, white 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-family: var(--font-display);
+    /* background: linear-gradient(135deg, #FFD93D 0%, white 100%); */
+    color: var(--ion-color-primary);
+    /* Charcoal visibility */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    /* background-clip: text; */
     line-height: 1;
     margin-bottom: var(--spacing-xs);
 }
 
 .stat-label {
     font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 500;
+    color: var(--ion-color-primary);
+    /* Charcoal visibility */
+    font-weight: 600;
 }
 
 .stat-divider {
     width: 2px;
     height: 50px;
-    background: linear-gradient(to bottom,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent);
+    background: rgba(52, 73, 94, 0.2);
+    /* Charcoal with opacity */
 }
 
 /* ===== IMAGE SECTION (Desktop only) ===== */
@@ -223,30 +276,8 @@
 
 /* ===== DECORATIVE ELEMENTS ===== */
 .hero-decoration {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.3;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.hero-decoration-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--ion-color-tertiary);
-    top: -100px;
-    right: 10%;
-    animation: pulse 8s ease-in-out infinite;
-}
-
-.hero-decoration-2 {
-    width: 300px;
-    height: 300px;
-    background: var(--ion-color-secondary);
-    bottom: -50px;
-    left: 5%;
-    animation: pulse 6s ease-in-out infinite reverse;
+    display: none;
+    /* Removed as requested */
 }
 
 /* ===== MOBILE SPECIFIC ===== */
