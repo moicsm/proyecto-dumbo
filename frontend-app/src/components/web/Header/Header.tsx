@@ -6,12 +6,22 @@ import './Header.css';
 const Header: React.FC = () => {
     const { isDesktop } = usePlatform();
     const [openMenu, setOpenMenu] = useState<string | null>(null);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     // Solo renderizar en desktop/web
     if (!isDesktop) return null;
 
     return (
-        <header className="app-header">
+        <header className={`app-header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="header-content container">
                 {/* Logo con perrito */}
                 <a href="/home" className="header-logo">
@@ -51,8 +61,8 @@ const Header: React.FC = () => {
                                 </MenuItem>
                                 <MenuItem>
                                     {({ focus }) => (
-                                        <a href="/requisitos-adopcion" className={`dropdown-item ${focus ? 'active' : ''}`}>
-                                            Requisitos de adopción
+                                        <a href="/conocelos" className={`dropdown-item ${focus ? 'active' : ''}`}>
+                                            Conocelos
                                         </a>
                                     )}
                                 </MenuItem>
@@ -126,12 +136,7 @@ const Header: React.FC = () => {
                         )}
                     </Menu>
 
-                    {/* Tienda */}
-                    <div className="nav-item">
-                        <a href="/tienda" className="nav-link">
-                            Tienda
-                        </a>
-                    </div>
+
 
                     {/* Donaciones */}
                     <Menu

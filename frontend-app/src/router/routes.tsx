@@ -4,12 +4,13 @@ import { Route } from 'react-router-dom';
 import { Home } from '@/views/Home/pages/Home';
 import { Nosotros } from '@/views/Nosotros/pages/Nosotros';
 import { QuieroAdoptar } from '@/views/QuieroAdoptar/pages/QuieroAdoptar';
-import { RequisitosAdopcion } from '@/views/RequisitosAdopcion/pages/RequisitosAdopcion';
+import { Conocelos } from '@/views/Conocelos/pages/Conocelos';
+
 import { Castra } from '@/views/Castra/pages/Castra';
 import { DenunciaMaltrato } from '@/views/DenunciaMaltrato/pages/DenunciaMaltrato';
 import { Voluntarios } from '@/views/Voluntarios/pages/Voluntarios';
 import { HogarTransito } from '@/views/HogarTransito/pages/HogarTransito';
-import { Tienda } from '@/views/Tienda/pages/Tienda';
+
 import { AporteEconomico } from '@/views/AporteEconomico/pages/AporteEconomico';
 import { DonacionInsumos } from '@/views/DonacionInsumos/pages/DonacionInsumos';
 import { Contacto } from '@/views/Contacto/pages/Contacto';
@@ -28,7 +29,8 @@ export const routes = [
 
     // Adoptá
     { path: '/quiero-adoptar', component: QuieroAdoptar, exact: true },
-    { path: '/requisitos-adopcion', component: RequisitosAdopcion, exact: true },
+    { path: '/conocelos', component: Conocelos, exact: true },
+
 
     // Salvá vidas
     { path: '/castra', component: Castra, exact: true },
@@ -38,8 +40,7 @@ export const routes = [
     { path: '/voluntarios', component: Voluntarios, exact: true },
     { path: '/hogar-transito', component: HogarTransito, exact: true },
 
-    // Tienda
-    { path: '/tienda', component: Tienda, exact: true },
+
 
     // Donaciones
     { path: '/aporte-economico', component: AporteEconomico, exact: true },

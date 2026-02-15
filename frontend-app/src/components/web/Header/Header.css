@@ -4,12 +4,28 @@
  */
 
 .app-header {
-    position: sticky;
+    position: fixed;
+    /* Fixed to stay on top of Hero */
+    width: 100%;
     top: 0;
-    z-index: 100;
-    background: var(--card-bg);
-    box-shadow: var(--shadow-sm);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.85);
+    /* Semi-transparent White */
+    backdrop-filter: blur(10px);
+    /* Glassmorphism Blur */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    transition: all 0.4s ease;
+    /* Smooth transition */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.app-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    /* More opaque on scroll */
+    box-shadow: var(--shadow-md);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .header-content {
@@ -69,7 +85,8 @@
     align-items: center;
     gap: 6px;
     padding: var(--spacing-sm) var(--spacing-md);
-    color: var(--ion-text-color);
+    color: var(--ion-color-primary);
+    /* Slate Blue #2C3E50 always */
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
@@ -83,8 +100,19 @@
 }
 
 .nav-link:hover {
-    color: var(--ion-color-primary);
+    color: var(--ion-color-tertiary);
+    /* Salmon on hover */
     transform: translateY(-1px);
+}
+
+/* Scrolled State Links - Keep same color */
+.app-header.scrolled .nav-link {
+    color: var(--ion-color-primary);
+    /* Still Slate Blue */
+}
+
+.app-header.scrolled .nav-link:hover {
+    color: var(--ion-color-tertiary);
 }
 
 .nav-link:focus {
@@ -118,7 +146,8 @@
     left: 50%;
     transform: translateX(-50%);
     margin-top: 12px;
-    background: var(--card-bg);
+    background: #FFFFFF;
+    /* Always white background for dropdown */
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     min-width: 200px;
@@ -159,7 +188,8 @@
 .dropdown-item {
     display: block;
     padding: var(--spacing-sm) var(--spacing-lg);
-    color: var(--ion-text-color);
+    color: var(--ion-color-primary);
+    /* Dark text in dropdown */
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -169,8 +199,10 @@
 }
 
 .dropdown-item:hover {
-    background: transparent;
-    color: var(--ion-color-primary);
+    background: var(--color-washed-white);
+    /* Light hover background */
+    color: var(--ion-color-tertiary);
+    /* Salmon text hover */
     padding-left: var(--spacing-lg);
 }
 
@@ -188,8 +220,10 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    gap: 8px;
     padding: 12px 28px;
-    background: var(--ion-color-primary);
+    background: var(--ion-color-tertiary);
+    /* Salmon Button */
     color: white;
     text-decoration: none;
     font-weight: 700;
@@ -204,7 +238,8 @@
 .donate-btn:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-colored);
-    background: var(--ion-color-primary-shade);
+    background: var(--ion-color-tertiary-shade);
+    /* Darker Salmon */
 }
 
 .donate-btn svg {
