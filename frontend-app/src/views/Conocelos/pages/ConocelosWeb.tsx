@@ -1,41 +1,25 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import WebLayout from '@/components/web/Layout/WebLayout';
 import { IonButton } from '@ionic/react';
 import './ConocelosWeb.css';
 
-// Mock data de animales disponibles para adopción
-const ANIMALS_DATA = [
-    { id: 1, name: 'Ginny', image: '🐕', type: 'Perro', age: '2 años', gender: 'Hembra' },
-    { id: 2, name: 'Pepita', image: '🐕', type: 'Perro', age: '3 años', gender: 'Hembra' },
-    { id: 3, name: 'Bigotes', image: '🐈', type: 'Gato', age: '1 año', gender: 'Macho' },
-    { id: 4, name: 'Titina', image: '🐈', type: 'Gato', age: '4 años', gender: 'Hembra' },
-    { id: 5, name: 'Maca', image: '🐕', type: 'Perro', age: '5 años', gender: 'Hembra' },
-    { id: 6, name: 'Boku', image: '🐕', type: 'Perro', age: '1 año', gender: 'Macho' },
-    { id: 7, name: 'Teddy', image: '🐕', type: 'Perro', age: '3 años', gender: 'Macho' },
-    { id: 8, name: 'Yoli', image: '🐈', type: 'Gato', age: '2 años', gender: 'Hembra' },
-    { id: 9, name: 'Roma', image: '🐕', type: 'Perro', age: '4 años', gender: 'Hembra' },
-    { id: 10, name: 'Teddy', image: '🐕', type: 'Perro', age: '2 años', gender: 'Macho' },
-    { id: 11, name: 'Zazu', image: '🐈', type: 'Gato', age: '1 año', gender: 'Macho' },
-    { id: 12, name: 'Lego', image: '🐕', type: 'Perro', age: '6 años', gender: 'Macho' },
-    // Páginas adicionales de ejemplo
-    { id: 13, name: 'Luna', image: '🐈', type: 'Gato', age: '3 años', gender: 'Hembra' },
-    { id: 14, name: 'Max', image: '🐕', type: 'Perro', age: '2 años', gender: 'Macho' },
-    { id: 15, name: 'Michi', image: '🐈', type: 'Gato', age: '1 año', gender: 'Macho' },
-    { id: 16, name: 'Canela', image: '🐕', type: 'Perro', age: '4 años', gender: 'Hembra' },
-    { id: 17, name: 'Nieve', image: '🐈', type: 'Gato', age: '2 años', gender: 'Hembra' },
-    { id: 18, name: 'Rocky', image: '🐕', type: 'Perro', age: '5 años', gender: 'Macho' },
-    { id: 19, name: 'Pelusa', image: '🐈', type: 'Gato', age: '3 años', gender: 'Hembra' },
-    { id: 20, name: 'Thor', image: '🐕', type: 'Perro', age: '3 años', gender: 'Macho' },
-    { id: 21, name: 'Simba', image: '🐈', type: 'Gato', age: '2 años', gender: 'Macho' },
-    { id: 22, name: 'Bella', image: '🐕', type: 'Perro', age: '1 año', gender: 'Hembra' },
-    { id: 23, name: 'Garfield', image: '🐈', type: 'Gato', age: '4 años', gender: 'Macho' },
-    { id: 24, name: 'Chispa', image: '🐕', type: 'Perro', age: '2 años', gender: 'Hembra' },
-];
+import { mockAnimals } from '@/data/mockData';
+
+const ANIMALS_DATA = mockAnimals.map(animal => ({
+    id: animal.id,
+    name: animal.name,
+    image: animal.imageUrl,
+    type: animal.species === 'perro' ? 'Perro' : animal.species === 'gato' ? 'Gato' : 'Otro',
+    age: `${animal.age} ${animal.age === 1 ? 'año' : 'años'}`,
+    gender: animal.gender === 'hembra' ? 'Hembra' : 'Macho'
+}));
 
 const ITEMS_PER_PAGE = 12;
 const TOTAL_PAGES = Math.ceil(ANIMALS_DATA.length / ITEMS_PER_PAGE);
 
 const ConocelosWeb = () => {
+    const history = useHistory();
     const [currentPage, setCurrentPage] = useState(1);
 
     // Calcular animales de la página actual
@@ -90,19 +74,19 @@ const ConocelosWeb = () => {
                 {/* Animals Grid */}
                 <div className="animals-grid">
                     {currentAnimals.map((animal) => (
-                        <div key={animal.id} className="animal-card">
+                        <div 
+                            key={animal.id} 
+                            className="animal-card"
+                            onClick={() => history.push(`/animal/${animal.id}`)}
+                            role="button"
+                            tabIndex={0}
+                        >
                             <div className="animal-image">
-                                <span className="animal-emoji">{animal.image}</span>
-                                <div className="animal-overlay">
-                                    <IonButton
-                                        fill="solid"
-                                        color="primary"
-                                        size="small"
-                                        routerLink="/quiero-adoptar"
-                                    >
-                                        Quiero Adoptarlo
-                                    </IonButton>
-                                </div>
+                                {animal.image.startsWith('/') ? (
+                                    <img src={animal.image} alt={animal.name} className="animal-photo" />
+                                ) : (
+                                    <span className="animal-emoji">{animal.image}</span>
+                                )}
                             </div>
                             <div className="animal-info">
                                 <h3 className="animal-name">{animal.name}</h3>

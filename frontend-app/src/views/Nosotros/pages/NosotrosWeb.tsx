@@ -40,15 +40,52 @@ const NosotrosWeb = () => {
                     </IonCard>
                 </div>
 
-                {/* Historia Básica */}
+                {/* El Legado de Dumbo */}
                 <section style={{ marginBottom: '4rem' }}>
-                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>Nuestra Historia</h2>
+                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>El Legado de Dumbo</h2>
                     <div style={{ background: 'white', padding: '2rem', borderRadius: '1rem', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}>
-                        <p style={{ marginBottom: '1rem', lineHeight: '1.6' }}>
-                            Proyecto Dumbo nació en 2020, en medio de la pandemia, cuando notamos un aumento alarmante en el abandono de mascotas. Lo que comenzó como un grupo de 3 amigos alimentando perros callejeros, hoy es una fundación constituida que ha rescatado a más de 500 animales.
+                        <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                            La Fundación Proyecto Dumbo se formalizó en julio de 2021 en el estado Aragua, consolidando una labor de rescate que su fundadora, Michelle Flores, inició desde la infancia junto a su madre. El motor definitivo para la creación de esta fundación fue el rescate de Dumbo, un canino atropellado cuya costosa cirugía fue posible gracias a la solidaridad de las personas a través de redes sociales.
                         </p>
                         <p style={{ lineHeight: '1.6' }}>
-                            Nos enfocamos en los casos más difíciles: animales atropellados, seniors o con enfermedades crónicas que otros ignoran. Para nosotros, cada vida es un tesoro.
+                            A raíz de este caso, el proyecto cobró una relevancia masiva, logrando destacar en las fases clasificatorias de un concurso de emprendimiento de Ron Santa Teresa. Aunque el premio no se concretó, la experiencia sirvió para que Michelle Flores, con el apoyo de una comunidad digital apasionada, decidiera fundar formalmente la institución. Hoy en día, la fundación utiliza estrategias de marketing, voluntariado y alianzas con artistas y empresas para profesionalizar la labor de bienestar animal.
+                        </p>
+                    </div>
+                </section>
+
+                {/* Infraestructura y Logística */}
+                <section style={{ marginBottom: '4rem' }}>
+                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>Infraestructura y Logística de Rescate</h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                        <IonCard style={{ margin: 0 }}>
+                            <IonCardContent style={{ padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--ion-color-primary)' }}>Sede 1 (Refugio Fundacional)</h3>
+                                <p style={{ lineHeight: '1.6' }}>
+                                    Con cuatro años de trayectoria, esta sede ha brindado refugio y atención a más de 400 animales. Gracias a convenios con clínicas veterinarias privadas y el apoyo constante de sus seguidores, se han concretado más de 300 adopciones responsables, respaldadas por documentos legales y controles de seguimiento.
+                                </p>
+                            </IonCardContent>
+                        </IonCard>
+
+                        <IonCard style={{ margin: 0 }}>
+                            <IonCardContent style={{ padding: '2rem' }}>
+                                <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--ion-color-primary)' }}>Sede 2 (Control de Natalidad)</h3>
+                                <p style={{ lineHeight: '1.6' }}>
+                                    Especializada en la atención de hembras, esta sede se enfoca en romper el ciclo de reproducción en las calles. Cuenta con caniles propios para el cuidado postoperatorio de las perras esterilizadas, habiendo superado ya las 50 intervenciones en 2025.
+                                </p>
+                            </IonCardContent>
+                        </IonCard>
+                    </div>
+                </section>
+
+                {/* Visión y Metas 2026 */}
+                <section style={{ marginBottom: '4rem' }}>
+                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '2rem' }}>Visión y Metas 2026</h2>
+                    <div style={{ background: 'white', padding: '2rem', borderRadius: '1rem', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}>
+                        <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                            La finalidad de la institución es alcanzar un país donde el rescate ya no sea necesario, gracias a una ciudadanía educada y un monitoreo constante de la fauna doméstica. Para este año, la fundación se ha propuesto la adquisición de una unidad móvil de rescates (ambulancia).
+                        </p>
+                        <p style={{ lineHeight: '1.6' }}>
+                            Asimismo, se encuentra en marcha la construcción de un quirófano y consultorio propio en la Sede 2. Este espacio estará destinado a atender perros en situación de calle y a brindar apoyo médico a familias de bajos recursos que, a pesar de sus limitaciones económicas, mantienen a sus animales con amor y cuidados dentro de sus posibilidades.
                         </p>
                     </div>
                 </section>

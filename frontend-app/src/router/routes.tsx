@@ -5,6 +5,7 @@ import { Home } from '@/views/Home/pages/Home';
 import { Nosotros } from '@/views/Nosotros/pages/Nosotros';
 import { QuieroAdoptar } from '@/views/QuieroAdoptar/pages/QuieroAdoptar';
 import { Conocelos } from '@/views/Conocelos/pages/Conocelos';
+import { AnimalDetail } from '@/views/AnimalDetail/pages/AnimalDetail';
 
 import { Castra } from '@/views/Castra/pages/Castra';
 import { DenunciaMaltrato } from '@/views/DenunciaMaltrato/pages/DenunciaMaltrato';
@@ -30,6 +31,7 @@ export const routes = [
     // Adoptá
     { path: '/quiero-adoptar', component: QuieroAdoptar, exact: true },
     { path: '/conocelos', component: Conocelos, exact: true },
+    { path: '/animal/:id', component: AnimalDetail, exact: true },
 
 
     // Salvá vidas

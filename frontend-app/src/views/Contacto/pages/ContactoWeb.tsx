@@ -14,18 +14,13 @@ const ContactoWeb = () => {
             </div>
 
             <div className="page-container">
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', marginBottom: '8rem' }}>
 
                     {/* Info de contacto */}
                     <div>
                         <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '2rem', color: '#333' }}>Información de Contacto</h2>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                            <ContactItem
-                                icon={location}
-                                title="Visítanos (Cita Previa)"
-                                content={<>Calle Rescate 123, Sector La Esperanza<br />San Juan, Puerto Rico 00901</>}
-                            />
                             <ContactItem
                                 icon={mail}
                                 title="Escríbenos"
@@ -35,11 +30,6 @@ const ContactoWeb = () => {
                                 icon={logoWhatsapp}
                                 title="WhatsApp"
                                 content="+1 (787) 555-0123"
-                            />
-                            <ContactItem
-                                icon={time}
-                                title="Horario"
-                                content="Lunes a Sábado: 9:00 AM - 5:00 PM"
                             />
                         </div>
 
@@ -84,10 +74,7 @@ const ContactoWeb = () => {
                     </div>
                 </div>
 
-                {/* Map Placeholder */}
-                <div style={{ width: '100%', height: '400px', background: '#e9ecef', borderRadius: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <p style={{ color: '#adb5bd', fontSize: '1.5rem', fontWeight: 'bold' }}>Mapa de Google (Calle Rescate 123)</p>
-                </div>
+
             </div>
         </WebLayout>
     );

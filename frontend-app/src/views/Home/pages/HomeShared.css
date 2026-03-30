@@ -666,8 +666,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-3xl);
-    max-width: 1000px;
-    /* Increased to fit larger images */
+    max-width: 1200px;
     margin: 0 auto;
 }
 

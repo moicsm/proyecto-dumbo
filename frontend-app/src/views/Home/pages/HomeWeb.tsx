@@ -55,12 +55,12 @@ export const HomeWeb = () => {
         <div className="container">
           <div className="about-content">
             <div className="about-details">
-              <h2 className="about-title">conocenos</h2>
+              <h2 className="about-title">Quiénes Somos</h2>
               <p className="about-text">
-                Somos un equipo de personas impulsadas por la empatía hacia los animales, reconociéndolos como nuestros semejantes debido a su capacidad para experimentar placer, alegría, dolor y sufrimiento.
+                Somos una fundación dedicada al rescate, rehabilitación y adopción responsable de animales en el estado Aragua, Venezuela. Nacimos en 2021 tras el impacto del caso "Dumbo", transformando la solidaridad digital en una estructura sólida que hoy cuenta con dos sedes especializadas. Nuestra misión es erradicar el abandono mediante la esterilización constante y la educación sobre el respeto animal.
               </p>
               <div className="about-actions">
-                <button className="about-btn">ver más</button>
+                <a href="/nosotros" className="about-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>ver más</a>
               </div>
             </div>
             <div className="about-image-wrapper">
