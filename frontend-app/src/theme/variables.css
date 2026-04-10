@@ -150,33 +150,6 @@
   --card-hover-shadow: 0 12px 32px rgba(44, 44, 44, 0.08);
 }
 
-/* ===== DARK MODE OVERRIDES ===== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark mode backgrounds */
-    --ion-background-color: #121212;
-    --ion-background-color-rgb: 18, 18, 18;
-
-    --ion-text-color: #ffffff;
-    --ion-text-color-rgb: 255, 255, 255;
-
-    /* Adjust shadows for dark mode */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
-    --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.8);
-    --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.9);
-
-    /* Dark mode specific */
-    --app-bg-gradient: linear-gradient(180deg, #1A1A24 0%, #121212 100%);
-    --card-bg: #1E1E28;
-    --card-hover-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-
-    /* Adjust neutral colors for dark mode */
-    --ion-color-light: #2A2A35;
-    --ion-color-medium: #8A8A9E;
-    --ion-color-dark: #F9F9F9;
-  }
-}
 
 /* ===== UTILITY CLASSES ===== */
 .gradient-text {
