@@ -154,27 +154,27 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark mode backgrounds */
-    --ion-background-color: transparent;
-    --ion-background-color-rgb: 0, 0, 0;
+    --ion-background-color: #121212;
+    --ion-background-color-rgb: 18, 18, 18;
 
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255, 255, 255;
 
     /* Adjust shadows for dark mode */
-    --shadow-sm: none;
-    --shadow-md: none;
-    --shadow-lg: none;
-    --shadow-xl: none;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.8);
+    --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.9);
 
     /* Dark mode specific */
-    --app-bg-gradient: none;
-    --card-bg: transparent;
-    --card-hover-shadow: none;
+    --app-bg-gradient: linear-gradient(180deg, #1A1A24 0%, #121212 100%);
+    --card-bg: #1E1E28;
+    --card-hover-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
 
     /* Adjust neutral colors for dark mode */
-    --ion-color-light: transparent;
-    --ion-color-medium: transparent;
-    --ion-color-dark: transparent;
+    --ion-color-light: #2A2A35;
+    --ion-color-medium: #8A8A9E;
+    --ion-color-dark: #F9F9F9;
   }
 }
 
