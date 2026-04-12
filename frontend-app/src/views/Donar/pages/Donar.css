@@ -1,0 +1,140 @@
+/* 
+ * 💳 Donation Page Styles
+ * Isolated variables and styles for donation methods
+ */
+
+.donar-page {
+    --page-bg: #FFFFFF;
+    --card-bg: #F8F9FA;
+    --text-main: #2C3E50;
+    --text-muted: #666666;
+    --accent-primary: #4ECDC4;
+    
+    --zelle-color: #6A1B9A;
+    --paypal-color: #003087;
+    --pago-movil-color: #D32F2F;
+    --binance-color: #F3BA2F;
+    --bizum-color: #00C4B4;
+    --panama-color: #1976D2;
+
+    min-height: calc(100vh - 100px);
+    background: var(--page-bg);
+}
+
+/* Header */
+.donar-header {
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(44, 62, 80, 0.05) 100%);
+    text-align: center;
+    padding: 8rem 1rem 4rem;
+    border-radius: 0 0 3rem 3rem;
+    margin-bottom: 4rem;
+}
+
+.donar-header h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.donar-header p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Methods Grid */
+.donar-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 1.5rem;
+}
+
+.donar-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid #EEEEEE;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.donar-card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.donar-card h2 {
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Specific Card Theming */
+.donar-card.zelle h2 { color: var(--zelle-color); }
+.donar-card.paypal h2 { color: var(--paypal-color); }
+.donar-card.pago-movil h2 { color: var(--pago-movil-color); }
+.donar-card.binance h2 { color: var(--binance-color); }
+.donar-card.bizum h2 { color: var(--bizum-color); }
+.donar-card.panama h2 { color: var(--panama-color); }
+
+.method-details p {
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.highlight-text {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-main);
+    word-break: break-all;
+    background: #F0F4F8;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.donation-footer {
+    max-width: 800px;
+    margin: 0 auto 6rem;
+    text-align: center;
+    padding: 2rem;
+    background: #FFF9C4;
+    border-radius: 1.5rem;
+    border: 1px solid #FFECB3;
+}
+
+.donation-footer p {
+    color: #5D4037;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .donar-methods-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .donar-header {
+        padding-top: 6rem;
+    }
+}

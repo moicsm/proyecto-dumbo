@@ -1,9 +1,56 @@
 /**
  * 🎨 Fundación Dumbo - Design System
- * 
- * Premium color palette and design tokens for an amazing user experience
- * Works beautifully in both light and dark modes
+ *
+ * MODO CLARO FORZADO — no hay modo oscuro en esta app.
  */
+
+/* ===== FORZAR MODO CLARO SIEMPRE ===== */
+:root {
+  color-scheme: light only;
+}
+
+/* Bloquear por completo el modo oscuro de Ionic */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light only;
+    /* Fondo y texto base */
+    --ion-background-color: #FFFFFF !important;
+    --ion-background-color-rgb: 255, 255, 255 !important;
+    --ion-text-color: #2C2C2C !important;
+    --ion-text-color-rgb: 44, 44, 44 !important;
+    /* Steps (color scales que usa Ionic para texto/fondos) */
+    --ion-color-step-50: #f2f2f2 !important;
+    --ion-color-step-100: #e6e6e6 !important;
+    --ion-color-step-150: #d9d9d9 !important;
+    --ion-color-step-200: #cccccc !important;
+    --ion-color-step-250: #bfbfbf !important;
+    --ion-color-step-300: #b3b3b3 !important;
+    --ion-color-step-350: #a6a6a6 !important;
+    --ion-color-step-400: #999999 !important;
+    --ion-color-step-450: #8c8c8c !important;
+    --ion-color-step-500: #808080 !important;
+    --ion-color-step-550: #737373 !important;
+    --ion-color-step-600: #666666 !important;
+    --ion-color-step-650: #595959 !important;
+    --ion-color-step-700: #4d4d4d !important;
+    --ion-color-step-750: #404040 !important;
+    --ion-color-step-800: #333333 !important;
+    --ion-color-step-850: #262626 !important;
+    --ion-color-step-900: #191919 !important;
+    --ion-color-step-950: #0d0d0d !important;
+    /* Componentes Ionic */
+    --ion-item-background: #FFFFFF !important;
+    --ion-card-background: #FFFFFF !important;
+    --ion-toolbar-background: #FFFFFF !important;
+    --ion-tab-bar-background: #FFFFFF !important;
+    --ion-tab-bar-color: #2C2C2C !important;
+    --ion-overlay-background-color: #FFFFFF !important;
+    --ion-border-color: #e0e0e0 !important;
+    /* Custom app vars */
+    --card-bg: #FFFFFF !important;
+    --app-bg-gradient: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%) !important;
+  }
+}
 
 :root {
   /* ===== PRIMARY BRAND COLORS (Trust: Slate Blue) ===== */

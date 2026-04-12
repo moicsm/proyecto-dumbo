@@ -56,7 +56,7 @@ export const HomeMobile = () => {
                         <div className="about-details">
                             <h2 className="about-title">conocenos</h2>
                             <p className="about-text">
-                                Somos un equipo de personas impulsadas por la empatía hacia los animales, reconociéndolos como nuestros semejantes debido a su capacidad para experimentar placer, alegría, dolor y sufrimiento.
+                                Somos una fundación dedicada al rescate, rehabilitación y adopción responsable de animales en el estado Aragua, Venezuela. Nuestra misión es rescatar, rehabilitar y ubicar en hogares responsables a animales en situación de abandono, trabajando para erradicar el maltrato a través de la educación y la concientización social. Transformamos la realidad de las calles brindando una segunda oportunidad a quienes no tienen voz.
                             </p>
                             <div className="about-actions">
                                 <IonButton fill="solid" color="secondary" size="large" className="about-btn-mobile">
@@ -88,9 +88,9 @@ export const HomeMobile = () => {
                             </IonButton>
                         </div>
                         <div className="adopt-details">
-                            <h2 className="adopt-title">ADOPTÁ</h2>
+                            <h2 className="adopt-title">ADOPTA</h2>
                             <p className="adopt-text">
-                                Al pensar en adoptar, es crucial tener en cuenta diversos factores para garantizar una convivencia armoniosa. Evalúa el espacio disponible en tu hogar, el tiempo que puedes dedicar al juego y paseo, así como los costos asociados con la alimentación, atención veterinaria y cuidado durante las vacaciones. Asegúrate de que tu elección de mascota se ajuste a tu estilo de vida y a la cantidad de tiempo que puedes comprometer.
+                                <strong>Lee con el corazón, pero decide con la cabeza.</strong> Adoptar es un acto de amor, pero también un compromiso de vida por los próximos 15 años. Antes de postularte, te invitamos a reflexionar honestamente sobre tu tiempo, tu estabilidad y tu paciencia para brindarles la vida que merecen.
                             </p>
                             <div className="adopt-actions">
                                 <IonButton href="/antes-de-adoptar" className="adopt-secondary-btn-mobile" shape="round" color="dark">
@@ -108,7 +108,7 @@ export const HomeMobile = () => {
             {/* Donation Options Section - Priority 3 */}
             <section className="donation-options-section">
                 <div className="container">
-                    <h2 className="donation-title">TU AYUDA TRANSFORMA VIDAS</h2>
+                    <h2 className="donation-title">Tu aporte nos ayuda a salvar vidas</h2>
                     <div className="donation-options-grid">
                         <div className="donation-option-card">
                             <div className="donation-image-circle">
@@ -144,10 +144,10 @@ export const HomeMobile = () => {
                         <div className="calendar-details">
                             <h2 className="calendar-title">Calendario 2026</h2>
                             <p className="calendar-text">
-                                Nuestro Calendario Solidario 2026 nace del trabajo colectivo y la empatía de una comunidad que decide ayudar. Cada mes es testimonio de una vida transformada gracias a tu apoyo.
+                                Nuestro Calendario Solidario 2026 nace del trabajo colectivo y la empatía de una comunidad que decide ayudar. Cada mes es testimonio de una vida transformada gracias a tu apoyo constante.
                             </p>
                             <p className="calendar-text">
-                                Este calendario acompaña tu año y sostiene cada paso del camino hacia una vida mejor para los perros que son víctimas de maltrato y abandono.
+                                Este calendario acompaña tu año y sostiene cada paso del camino hacia una vida mejor para los perros que son víctimas de maltrato y abandono en las calles.
                             </p>
                             <div className="calendar-actions">
                                 <IonButton fill="outline" color="primary" size="large">

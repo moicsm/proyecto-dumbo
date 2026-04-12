@@ -1,83 +1,97 @@
+/* 
+ * 🐾 Animal Detail Page Styles
+ * Sectorized variables for independent control
+ */
+
 .animal-detail-container {
+    --page-bg: #FFFFFF;
+    --title-color: #2C3E50;
+    --text-color: #555555;
+    --accent-color: #4ECDC4;
+    --trait-color-1: #FFD1DC; /* Pastel Pink */
+    --trait-color-2: #D1EAFF; /* Pastel Blue */
+    --trait-color-3: #D1FFD7; /* Pastel Green */
+    --trait-color-4: #F7D1FF; /* Pastel Purple */
+    --trait-color-5: #FFF4D1; /* Pastel Yellow */
+    
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--spacing-3xl) var(--spacing-md);
+    padding: 120px 1.5rem 5rem 1.5rem;
     min-height: calc(100vh - 200px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
+/* Back Button */
 .back-btn {
-    background: none;
+    background: #F8F9FA;
     border: none;
-    color: var(--ion-color-primary);
-    font-size: 1.1rem;
-    font-weight: 600;
+    color: #2C3E50;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: var(--spacing-xl);
-    padding: 0;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
 .back-btn:hover {
-    text-decoration: underline;
+    background: #2C3E50;
+    color: white;
+    transform: translateX(-5px);
 }
 
+/* Main Grid */
 .animal-detail-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-2xl);
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
     align-items: start;
 }
 
+/* Gallery */
 .animal-gallery {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 1.5rem;
 }
 
 .main-image-wrapper {
     width: 100%;
     aspect-ratio: 4 / 3;
-    border-radius: var(--radius-lg);
+    border-radius: 2rem;
     overflow: hidden;
-    background: var(--card-bg);
-    box-shadow: var(--shadow-md);
+    background: #F8F9FA;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
 }
 
 .main-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    background-color: #f5f5f5;
+    object-fit: cover;
 }
 
 .thumbnail-list {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 1rem;
     overflow-x: auto;
-    padding-bottom: var(--spacing-xs);
+    padding-bottom: 0.5rem;
 }
 
 .thumbnail {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     flex-shrink: 0;
-    border-radius: var(--radius-md);
+    border-radius: 1rem;
     overflow: hidden;
     cursor: pointer;
     border: 3px solid transparent;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
 }
 
 .thumbnail.active {
-    border-color: var(--ion-color-primary);
-}
-
-.thumbnail:hover {
+    border-color: var(--accent-color);
     transform: scale(1.05);
 }
 
@@ -91,82 +105,99 @@
 .animal-info-section {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-lg);
+    gap: 2rem;
 }
 
 .animal-detail-title {
-    font-family: var(--font-display);
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    font-weight: 900;
     margin: 0;
-    color: var(--ion-text-color);
-    letter-spacing: -1px;
+    color: var(--title-color);
+    line-height: 1;
 }
 
 .animal-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    gap: 0.8rem;
 }
 
 .badge {
-    background: rgba(255, 107, 157, 0.1);
-    color: var(--ion-color-primary);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    font-size: 1rem;
+    background: #F0F2F5;
+    color: #2C3E50;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
     text-transform: capitalize;
 }
 
-.animal-story h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+.animal-story h3, .animal-personality h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    color: var(--title-color);
 }
 
 .animal-story p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--ion-color-medium);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
 }
 
-.animal-personality h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-}
-
+/* PERSONALITY TAGS - THE "BONITO" PART */
 .tags-container {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-sm);
+    gap: 0.8rem;
 }
 
 .trait-tag {
-    background: var(--gradient-secondary);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: var(--shadow-sm);
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
     text-transform: capitalize;
+    color: #2C3E50;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
 }
 
+.trait-tag:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Assigning colorful backgrounds to traits */
+.trait-tag:nth-child(5n+1) { background: var(--trait-color-1); }
+.trait-tag:nth-child(5n+2) { background: var(--trait-color-2); }
+.trait-tag:nth-child(5n+3) { background: var(--trait-color-3); }
+.trait-tag:nth-child(5n+4) { background: var(--trait-color-4); }
+.trait-tag:nth-child(5n+5) { background: var(--trait-color-5); }
+
+/* Action Button Container */
 .action-buttons {
-    margin-top: var(--spacing-xl);
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.adopt-btn-main {
+    --border-radius: 50px;
+    --padding-start: 3rem;
+    --padding-end: 3rem;
+    height: 56px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0;
 }
 
 @media (max-width: 900px) {
     .animal-detail-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
-
-    .main-image-wrapper {
-        aspect-ratio: 1;
-    }
-
+    
     .animal-detail-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 }

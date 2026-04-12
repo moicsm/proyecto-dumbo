@@ -56,7 +56,7 @@
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2.3rem, 5.5vw, 3.5rem);
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: var(--spacing-lg);
@@ -76,9 +76,9 @@
 }
 
 .hero-subtitle {
-    font-size: 1rem;
-    /* Standardized to 16px */
-    line-height: 1.7;
+    font-size: 1.25rem;
+    /* Aumentado a 20px para impacto y legibilidad */
+    line-height: 1.8;
     margin-bottom: var(--spacing-2xl);
     color: var(--ion-color-medium);
     /* Gray for readability */

@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonFooter, IonIcon } from '@ionic/react';
-import { logoFacebook, logoInstagram, logoTwitter, mailOutline, callOutline, locationOutline, heartOutline } from 'ionicons/icons';
+import { logoInstagram, logoTwitter, logoTiktok, mailOutline, locationOutline, heartOutline } from 'ionicons/icons';
 import { usePlatform } from '@/hooks/usePlatform';
 import './Footer.css';
 
@@ -23,17 +23,19 @@ const Footer: React.FC = () => {
                                 <span className="footer-logo-text">Proyecto Dumbo</span>
                             </div>
                             <p className="footer-description">
-                                Rescatando animales con amor desde 2020. Cada vida importa, cada animal merece una segunda oportunidad.
+                                No es uno más, son muchos menos. Dedicados al rescate, rehabilitación y adopción responsable en el estado Aragua, Venezuela.
                             </p>
                             <div className="footer-social">
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                                    <IonIcon icon={logoFacebook} />
-                                </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                                <a href="https://instagram.com/michellefloresm" target="_blank" rel="noopener noreferrer" className="social-link">
                                     <IonIcon icon={logoInstagram} />
                                 </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                                    <IonIcon icon={logoTwitter} />
+                                <a href="https://tiktok.com/@proyectodumbo" target="_blank" rel="noopener noreferrer" className="social-link">
+                                    <IonIcon icon={logoTiktok} />
+                                </a>
+                                <a href="https://x.com/proyectodumbo" target="_blank" rel="noopener noreferrer" className="social-link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg>
                                 </a>
                             </div>
                         </div>
@@ -47,7 +49,6 @@ const Footer: React.FC = () => {
                             <li><a href="/apadrinar">Apadrinar una Mascota</a></li>
                             <li><a href="/donar">Hacer una Donación</a></li>
                             <li><a href="/voluntariado">Voluntariado</a></li>
-                            <li><a href="/casos-exito">Casos de Éxito</a></li>
                         </ul>
                     </div>
 
@@ -69,15 +70,11 @@ const Footer: React.FC = () => {
                         <ul className="footer-contact">
                             <li>
                                 <IonIcon icon={locationOutline} />
-                                <span>San Juan, Puerto Rico</span>
+                                <span>Aragua, Venezuela</span>
                             </li>
                             <li>
                                 <IonIcon icon={mailOutline} />
-                                <a href="mailto:info@proyectodumbo.org">info@proyectodumbo.org</a>
-                            </li>
-                            <li>
-                                <IonIcon icon={callOutline} />
-                                <a href="tel:+17871234567">+1 (787) 123-4567</a>
+                                <a href="mailto:proyectodumbovenezuela@gmail.com">proyectodumbovenezuela@gmail.com</a>
                             </li>
                         </ul>
                         <div className="footer-cta">

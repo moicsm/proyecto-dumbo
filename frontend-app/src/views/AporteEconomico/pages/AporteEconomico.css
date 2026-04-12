@@ -1,0 +1,94 @@
+/* 
+ * 📈 Aporte Economico Styles
+ * Sectorized variables
+ */
+
+.aporte-economico-page {
+    --page-bg: #FFFFFF;
+    --card-bg: #F8F9FA;
+    --text-main: #2C3E50;
+    --zelle-color: #6A1B9A;
+    --pago-movil-color: #D32F2F;
+    --paypal-color: #003087;
+    --binance-color: #F3BA2F;
+
+    min-height: calc(100vh - 100px);
+    background: var(--page-bg);
+}
+
+.aporte-header {
+    text-align: center;
+    padding: 8rem 1rem 4rem;
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.05) 0%, rgba(44, 62, 80, 0.05) 100%);
+    border-radius: 0 0 3rem 3rem;
+    margin-bottom: 4rem;
+}
+
+.aporte-header h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.aporte-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    padding: 0 1.5rem;
+}
+
+.aporte-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    border: 1px solid #EEEEEE;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.aporte-card:hover {
+    transform: translateY(-5px);
+}
+
+.aporte-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.aporte-card h2 {
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.aporte-card.zelle h2 { color: var(--zelle-color); }
+.aporte-card.pago-movil h2 { color: var(--pago-movil-color); }
+.aporte-card.paypal h2 { color: var(--paypal-color); }
+.aporte-card.binance h2 { color: var(--binance-color); }
+
+.highlight-text {
+    font-size: 1rem;
+    font-weight: 800;
+    background: #F0F4F8;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.note {
+    font-size: 0.8rem;
+    color: #888;
+    font-style: italic;
+}
+
+.aporte-footer {
+    max-width: 700px;
+    margin: 0 auto 5rem;
+    text-align: center;
+    padding: 1.5rem;
+    background: #FFF9C4;
+    border-radius: 1rem;
+}

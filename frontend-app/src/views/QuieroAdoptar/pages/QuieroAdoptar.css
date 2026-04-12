@@ -1,0 +1,147 @@
+/* 
+ * Styles for Quiero Adoptar (Adoption Requirements)
+ * Isolated variables for independent control
+ */
+
+.adopt-page {
+    --page-bg: #FFFFFF;
+    --accent-color: #E4A69B;
+    --text-main: #2C3E50;
+    --text-muted: #555555;
+    --alert-bg: #FFF5F5;
+    --alert-border: #FFBDBD;
+}
+
+/* Header Section */
+.adopt-header {
+    --header-bg: linear-gradient(135deg, rgba(228, 166, 155, 0.1) 0%, rgba(44, 62, 80, 0.05) 100%);
+    text-align: center;
+    padding: 9rem 1rem 4rem 1rem;
+    background: var(--header-bg);
+    border-radius: 0 0 2rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.adopt-header h1 {
+    font-size: clamp(2rem, 5.5vw, 3.25rem);
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.adopt-header p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Reflexion Section */
+.reflexion-container {
+    max-width: 900px;
+    margin: 0 auto 5rem;
+    padding: 0 1rem;
+}
+
+.reflexion-warning {
+    background: var(--alert-bg);
+    border: 1px solid var(--alert-border);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.reflexion-warning h2 {
+    color: #C0392B;
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.reflexion-warning p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Commitment Points */
+.points-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.point-card {
+    background: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.point-card:hover {
+    transform: translateY(-5px);
+}
+
+.point-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.point-card p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.15rem;
+}
+
+/* Quote Section */
+.quote-box {
+    background: var(--text-main);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-box::after {
+    content: '"';
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.1;
+    top: -2rem;
+    left: 2rem;
+    font-family: serif;
+}
+
+.quote-box p {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .points-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .adopt-header {
+        padding-top: 7rem;
+    }
+    
+    .quote-box p {
+        font-size: 1.2rem;
+    }
+}

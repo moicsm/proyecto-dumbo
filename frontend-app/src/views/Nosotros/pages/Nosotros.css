@@ -1,0 +1,192 @@
+/* 
+ * Styles for Nosotros View
+ * Each section has its own color variables for independent control
+ */
+
+.nosotros-page {
+  /* Scope variables for the whole page */
+  --nosotros-bg: #FFFFFF;
+  --nosotros-text: #2C2C2C;
+}
+
+/* Header Section */
+.nosotros-header {
+  --header-bg: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(255, 107, 157, 0.1) 100%);
+  --header-title: #2C3E50;
+  --header-subtitle: #666666;
+  
+  text-align: center;
+  padding: 9rem 1rem 4rem 1rem;
+  background: var(--header-bg);
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.nosotros-header h1 {
+  color: var(--header-title);
+  font-size: clamp(2rem, 5.5vw, 3.25rem);
+  margin-bottom: 1rem;
+}
+
+.nosotros-header p {
+  color: var(--header-subtitle);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/* Mission & Vision Section */
+.mv-section {
+  --mv-card-bg: #FFFFFF;
+  --mv-title-color: #2C3E50;
+  --mv-text-color: #4A4A4A;
+  --mv-icon-bg: #f8f9fa;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.mv-card {
+  background: var(--mv-card-bg);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.mv-card h2 {
+  color: var(--mv-title-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.mv-card p {
+  color: var(--mv-text-color);
+  line-height: 1.7;
+}
+
+/* Legado (History) Section */
+.legado-section {
+  --legado-bg: #FFFFFF;
+  --legado-card-bg: #ffffff;
+  --legado-title: #2C3E50;
+  --legado-text: #333333;
+  --legado-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.legado-title {
+  color: var(--legado-title);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.legado-content {
+  background: var(--legado-card-bg);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--legado-shadow);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.legado-content p {
+  color: var(--legado-text);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Sedes (Infrastructure) Section */
+.sedes-section {
+  --sedes-title: #2C3E50;
+  --sedes-card-bg: #FFFFFF;
+  --sedes-accent: #E4A69B; /* Peach */
+  --sedes-text: #444444;
+
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+.sedes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.sede-card {
+  background: var(--sedes-card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  border-left: 5px solid var(--sedes-accent);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.sede-card h3 {
+  color: var(--sedes-accent);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+/* Metas (Goals) Section */
+.metas-section {
+  --metas-bg: #fcf6f5; /* Light peach tint */
+  --metas-title: #2C3E50;
+  --metas-text: #333333;
+  
+  background: var(--metas-bg);
+  padding: 4rem 1rem;
+  margin: 0 -1rem 4rem;
+  border-radius: 2rem;
+}
+
+.metas-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Valores Section */
+.valores-section {
+  --valores-title: #2C3E50;
+  --valores-icon: #E4A69B;
+  --valores-icon-bg: #FFF5F3;
+  --valores-text: #2C3E50;
+
+  padding: 0 1rem 4rem;
+  text-align: center;
+}
+
+.valores-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.valor-item {
+  width: 150px;
+}
+
+.valor-icon {
+  width: 90px;
+  height: 90px;
+  background: var(--valores-icon-bg);
+  color: var(--valores-icon);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2.5rem;
+}
+
+.valor-item h3 {
+  color: var(--valores-text);
+  font-size: 1.1rem;
+}

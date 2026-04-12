@@ -99,13 +99,6 @@ const Header: React.FC = () => {
                                         </a>
                                     )}
                                 </MenuItem>
-                                <MenuItem>
-                                    {({ focus }) => (
-                                        <a href="/denuncia-maltrato" className={`dropdown-item ${focus ? 'active' : ''}`}>
-                                            Denuncia el maltrato
-                                        </a>
-                                    )}
-                                </MenuItem>
                             </MenuItems>
                         )}
                     </Menu>
@@ -164,13 +157,6 @@ const Header: React.FC = () => {
                                     {({ focus }) => (
                                         <a href="/aporte-economico" className={`dropdown-item ${focus ? 'active' : ''}`}>
                                             Aporte económico
-                                        </a>
-                                    )}
-                                </MenuItem>
-                                <MenuItem>
-                                    {({ focus }) => (
-                                        <a href="/donacion-insumos" className={`dropdown-item ${focus ? 'active' : ''}`}>
-                                            Donación de insumos
                                         </a>
                                     )}
                                 </MenuItem>

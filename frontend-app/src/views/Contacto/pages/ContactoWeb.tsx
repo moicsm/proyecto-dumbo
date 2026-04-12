@@ -1,80 +1,93 @@
 import React from 'react';
 import WebLayout from '@/components/web/Layout/WebLayout';
 import { IonButton, IonInput, IonTextarea, IonItem, IonLabel, IonIcon } from '@ionic/react';
-import { logoFacebook, logoInstagram, logoTwitter, logoWhatsapp, mail, location, time } from 'ionicons/icons';
+import { logoInstagram, logoTwitter, logoTiktok, mail } from 'ionicons/icons';
+import './Contacto.css';
 
 const ContactoWeb = () => {
     return (
         <WebLayout>
-            <div className="page-header">
-                <h1 className="page-title">Contáctanos</h1>
-                <p className="page-subtitle">
-                    ¿Tienes dudas, quieres adoptar o denunciar un caso? Estamos aquí para escucharte.
-                </p>
-            </div>
+            <div className="contacto-page">
+                {/* Header de la página */}
+                <header className="contacto-header">
+                    <h1>Contáctanos</h1>
+                    <p>
+                        ¿Tienes dudas, quieres adoptar o denunciar un caso? Estamos aquí para escucharte.
+                    </p>
+                </header>
 
-            <div className="page-container">
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', marginBottom: '8rem' }}>
+                <div className="page-container">
+                    <div className="contacto-info-container">
 
-                    {/* Info de contacto */}
-                    <div>
-                        <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '2rem', color: '#333' }}>Información de Contacto</h2>
+                        {/* Info de contacto */}
+                        <div>
+                            <h2 className="contacto-info-title">Nuestras Redes</h2>
+                            <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
+                                La forma más rápida de contactarnos es a través de nuestras redes sociales o correo electrónico.
+                            </p>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                            <ContactItem
-                                icon={mail}
-                                title="Escríbenos"
-                                content="info@proyectodumbo.org"
-                            />
-                            <ContactItem
-                                icon={logoWhatsapp}
-                                title="WhatsApp"
-                                content="+1 (787) 555-0123"
-                            />
-                        </div>
+                            <div className="flex-column" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                                <ContactItem
+                                    icon={mail}
+                                    title="Correo Electrónico"
+                                    content={<a href="mailto:proyectodumbovenezuela@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>proyectodumbovenezuela@gmail.com</a>}
+                                />
+                            </div>
 
-                        <div style={{ marginTop: '3rem' }}>
-                            <h3 style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>Síguenos en redes</h3>
-                            <div style={{ display: 'flex', gap: '1rem' }}>
-                                <SocialButton icon={logoFacebook} color="#1877f2" />
-                                <SocialButton icon={logoInstagram} color="#e4405f" />
-                                <SocialButton icon={logoTwitter} color="#1da1f2" />
+                            <div className="contacto-social-section" style={{ marginTop: '3rem' }}>
+                                <h3 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', fontWeight: '800' }}>Síguenos</h3>
+                                <div className="contacto-social-grid" style={{ display: 'flex', gap: '1rem' }}>
+                                    <SocialButton 
+                                        icon={logoInstagram} 
+                                        color="#e4405f" 
+                                        link="https://instagram.com/michellefloresm"
+                                    />
+                                    <SocialButton 
+                                        icon={logoTiktok} 
+                                        color="#000000" 
+                                        link="https://tiktok.com/@proyectodumbo"
+                                    />
+                                    <SocialButton 
+                                        icon={logoTwitter} 
+                                        color="#000000" 
+                                        link="https://x.com/proyectodumbo"
+                                        isX={true}
+                                    />
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Formulario */}
-                    <div style={{ background: 'white', padding: '2.5rem', borderRadius: '1rem', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
-                        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#333' }}>Envíanos un mensaje</h2>
-                        <form onSubmit={(e) => e.preventDefault()}>
-                            <IonItem className="ion-margin-bottom" lines="none" style={{ '--background': '#f8f9fa', borderRadius: '8px', border: '1px solid #eee' }}>
-                                <IonLabel position="floating" style={{ color: '#666' }}>Nombre Completo</IonLabel>
-                                <IonInput type="text"></IonInput>
-                            </IonItem>
+                        {/* Formulario */}
+                        <div className="contacto-form-card">
+                            <h2 className="contacto-form-title">Envíanos un mensaje</h2>
+                            <form onSubmit={(e) => e.preventDefault()}>
+                                <IonItem className="contacto-input-item ion-margin-bottom" lines="none">
+                                    <IonLabel position="floating" style={{ color: 'var(--form-label-color)' }}>Nombre Completo</IonLabel>
+                                    <IonInput type="text" placeholder="Tu nombre"></IonInput>
+                                </IonItem>
 
-                            <IonItem className="ion-margin-bottom" lines="none" style={{ '--background': '#f8f9fa', borderRadius: '8px', border: '1px solid #eee' }}>
-                                <IonLabel position="floating" style={{ color: '#666' }}>Email</IonLabel>
-                                <IonInput type="email"></IonInput>
-                            </IonItem>
+                                <IonItem className="contacto-input-item ion-margin-bottom" lines="none">
+                                    <IonLabel position="floating" style={{ color: 'var(--form-label-color)' }}>Email</IonLabel>
+                                    <IonInput type="email" placeholder="tu@correo.com"></IonInput>
+                                </IonItem>
 
-                            <IonItem className="ion-margin-bottom" lines="none" style={{ '--background': '#f8f9fa', borderRadius: '8px', border: '1px solid #eee' }}>
-                                <IonLabel position="floating" style={{ color: '#666' }}>Asunto</IonLabel>
-                                <IonInput type="text"></IonInput>
-                            </IonItem>
+                                <IonItem className="contacto-input-item ion-margin-bottom" lines="none">
+                                    <IonLabel position="floating" style={{ color: 'var(--form-label-color)' }}>Asunto</IonLabel>
+                                    <IonInput type="text" placeholder="Motivo de contacto"></IonInput>
+                                </IonItem>
 
-                            <IonItem className="ion-margin-bottom" lines="none" style={{ '--background': '#f8f9fa', borderRadius: '8px', border: '1px solid #eee' }}>
-                                <IonLabel position="floating" style={{ color: '#666' }}>Mensaje</IonLabel>
-                                <IonTextarea rows={5}></IonTextarea>
-                            </IonItem>
+                                <IonItem className="contacto-input-item ion-margin-bottom" lines="none">
+                                    <IonLabel position="floating" style={{ color: 'var(--form-label-color)' }}>Mensaje</IonLabel>
+                                    <IonTextarea rows={5} placeholder="Escribe tu mensaje aquí..."></IonTextarea>
+                                </IonItem>
 
-                            <IonButton expand="block" type="submit" color="primary" size="large" style={{ marginTop: '2rem', '--box-shadow': '0 4px 10px rgba(var(--ion-color-primary-rgb), 0.3)' }}>
-                                Enviar Mensaje
-                            </IonButton>
-                        </form>
+                                <IonButton expand="block" type="submit" color="primary" shape="round" style={{ marginTop: '2rem', height: '56px', fontWeight: '800' }}>
+                                    Enviar Mensaje
+                                </IonButton>
+                            </form>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
         </WebLayout>
     );
@@ -82,27 +95,26 @@ const ContactoWeb = () => {
 
 // Helper Components
 const ContactItem = ({ icon, title, content }: { icon: any, title: string, content: React.ReactNode }) => (
-    <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-        <div style={{
-            background: '#fff0e5', padding: '10px', borderRadius: '50%',
-            marginRight: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center'
-        }}>
-            <IonIcon icon={icon} style={{ fontSize: '24px', color: '#ff6b00' }} />
+    <div className="contact-item">
+        <div className="contact-icon-wrapper">
+            <IonIcon icon={icon} style={{ fontSize: '24px' }} />
         </div>
-        <div>
-            <h3 style={{ margin: '0 0 0.3rem 0', fontSize: '1.1rem', fontWeight: 'bold' }}>{title}</h3>
-            <p style={{ margin: 0, color: '#666', lineHeight: '1.5' }}>{content}</p>
+        <div className="contact-details">
+            <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: '800' }}>{title}</h3>
+            <p style={{ margin: 0, color: 'var(--text-muted)' }}>{content}</p>
         </div>
     </div>
 );
 
-const SocialButton = ({ icon, color }: { icon: any, color: string }) => (
-    <a href="#" style={{
-        width: '45px', height: '45px', borderRadius: '50%', background: color,
-        display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white',
-        transition: 'transform 0.2s'
-    }}>
-        <IonIcon icon={icon} style={{ fontSize: '22px' }} />
+const SocialButton = ({ icon, color, link, isX }: { icon: any, color: string, link: string, isX?: boolean }) => (
+    <a href={link} target="_blank" rel="noopener noreferrer" className="social-circle-btn" style={{ background: color, display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50px', height: '50px', borderRadius: '50%', color: 'white' }}>
+        {isX ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+        ) : (
+            <IonIcon icon={icon} style={{ fontSize: '24px' }} />
+        )}
     </a>
 );
 

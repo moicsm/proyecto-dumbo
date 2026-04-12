@@ -19,7 +19,7 @@ La navegación ahora incluye los siguientes menús:
 
 **Menús Principales:**
 - **Nosotros** - Enlace simple
-- **Adoptá** - Menú desplegable
+- **Adopta** - Menú desplegable
   - Quiero Adoptar
   - Requisitos de adopción
 - **Salvá vidas** - Menú desplegable

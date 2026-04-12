@@ -1,35 +1,59 @@
 /* Conocelos Page Styles */
 
-.conocelos-container {
+.conocelos-page {
+    --page-bg: #FFFFFF;
+    --header-bg: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(255, 107, 157, 0.1) 100%);
+    --header-title: #2C3E50;
+    --header-subtitle: #666666;
+    
+    --card-bg: #FFFFFF;
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    --card-hover-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    --card-name-color: #2C3E50;
+    --card-badge-bg: linear-gradient(135deg, rgba(255, 107, 157, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+    --card-badge-text: #2C3E50;
+    --card-badge-border: rgba(255, 107, 157, 0.2);
+    
+    --pagination-btn-bg: #FFFFFF;
+    --pagination-btn-text: #2C3E50;
+    --pagination-btn-border: #2C3E50;
+    --pagination-active-bg: linear-gradient(135deg, #2C2C2C 0%, #4A4A4A 100%);
+    --pagination-active-text: #FFFFFF;
+
     min-height: calc(100vh - 200px);
-    padding: var(--spacing-3xl) var(--spacing-xl);
-    padding-top: 140px;
-    max-width: 1400px;
-    margin: 0 auto;
+    background: var(--page-bg);
+}
+
+/* BOXED CONTAINER SYSTEM */
+.conocelos-page .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 /* Header Section */
 .conocelos-header {
     text-align: center;
-    margin-bottom: var(--spacing-3xl);
-    padding: var(--spacing-xl) 0;
+    padding: 9rem 0 4rem 0;
+    background: var(--header-bg);
+    border-radius: 0 0 2rem 2rem;
+    margin-bottom: 4rem;
 }
 
 .conocelos-title {
     font-family: var(--font-display);
-    font-size: 3.5rem;
-    font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: var(--spacing-md);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--header-title);
+    margin-bottom: 1rem;
     letter-spacing: -0.02em;
 }
 
 .conocelos-subtitle {
     font-size: 1.25rem;
-    color: var(--ion-color-medium);
+    color: var(--header-subtitle);
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -39,16 +63,16 @@
 .animals-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-3xl);
+    gap: 2rem;
+    margin-bottom: 3rem;
 }
 
 /* Animal Card */
 .animal-card {
     background: var(--card-bg);
-    border-radius: var(--radius-lg);
+    border-radius: 1rem;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--card-shadow);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
@@ -64,10 +88,7 @@
     position: relative;
     width: 100%;
     padding-top: 100%;
-    /* 1:1 Aspect Ratio */
-    background: linear-gradient(135deg,
-            var(--ion-color-primary-tint) 0%,
-            var(--ion-color-secondary-tint) 100%);
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
     overflow: hidden;
 }
 
@@ -89,15 +110,8 @@
     transition: transform 0.4s ease;
 }
 
-.animal-card:hover .animal-emoji {
-    transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
-}
-
-
-
-/* Animal Info */
 .animal-info {
-    padding: var(--spacing-lg);
+    padding: 1.5rem;
     text-align: center;
 }
 
@@ -105,28 +119,26 @@
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--ion-text-color);
-    margin-bottom: var(--spacing-sm);
+    color: var(--card-name-color);
+    margin-bottom: 1rem;
 }
 
 .animal-details {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: 0.5rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .detail-badge {
     display: inline-block;
-    padding: var(--spacing-xs) var(--spacing-md);
-    background: linear-gradient(135deg,
-            rgba(255, 107, 157, 0.1) 0%,
-            rgba(78, 205, 196, 0.1) 100%);
-    border: 1px solid rgba(255, 107, 157, 0.2);
-    border-radius: var(--radius-full);
+    padding: 0.25rem 0.75rem;
+    background: var(--card-badge-bg);
+    border: 1px solid var(--card-badge-border);
+    border-radius: 999px;
     font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--ion-color-primary);
+    font-weight: 600;
+    color: var(--card-badge-text);
 }
 
 /* Pagination */
@@ -134,17 +146,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-xl) 0;
+    gap: 1rem;
+    padding: 3rem 0 5rem 0;
     flex-wrap: wrap;
 }
 
 .pagination-arrow {
-    padding: var(--spacing-md) var(--spacing-lg);
-    background: var(--card-bg);
-    border: 2px solid var(--ion-color-primary);
-    border-radius: var(--radius-md);
-    color: var(--ion-color-primary);
+    padding: 0.75rem 1.5rem;
+    background: var(--pagination-btn-bg);
+    border: 2px solid var(--pagination-btn-border);
+    border-radius: 0.75rem;
+    color: var(--pagination-btn-text);
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
@@ -153,10 +165,10 @@
 }
 
 .pagination-arrow:hover:not(:disabled) {
-    background: var(--ion-color-primary);
+    background: var(--pagination-btn-border);
     color: white;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .pagination-arrow:disabled {
@@ -166,17 +178,17 @@
 
 .page-numbers {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .page-number {
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: var(--card-bg);
+    padding: 0.5rem 1rem;
+    background: var(--pagination-btn-bg);
     border: 2px solid transparent;
-    border-radius: var(--radius-sm);
-    color: var(--ion-text-color);
+    border-radius: 0.5rem;
+    color: #444444;
     font-weight: 500;
     font-size: 0.9rem;
     cursor: pointer;
@@ -185,103 +197,24 @@
 }
 
 .page-number:hover {
-    border-color: var(--ion-color-primary);
-    background: rgba(255, 107, 157, 0.05);
+    border-color: var(--pagination-btn-border);
+    background: rgba(0, 0, 0, 0.02);
 }
 
 .page-number.active {
-    background: var(--gradient-primary);
-    color: white;
-    border-color: var(--ion-color-primary);
-    box-shadow: var(--shadow-colored);
+    background: var(--pagination-active-bg);
+    color: var(--pagination-active-text);
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-    .animals-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: var(--spacing-lg);
-    }
-}
-
 @media (max-width: 768px) {
-    .conocelos-container {
-        padding: var(--spacing-xl) var(--spacing-md);
+    .conocelos-header {
+        padding-top: 7rem;
     }
-
-    .conocelos-title {
-        font-size: 2.5rem;
-    }
-
-    .conocelos-subtitle {
-        font-size: 1.1rem;
-    }
-
+    
     .animals-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: var(--spacing-md);
-    }
-
-    .animal-emoji {
-        font-size: 4rem;
-    }
-
-    .pagination-container {
-        gap: var(--spacing-sm);
-    }
-
-    .pagination-arrow {
-        min-width: 100px;
-        padding: var(--spacing-sm) var(--spacing-md);
-        font-size: 0.9rem;
-    }
-
-    .page-number {
-        min-width: 60px;
-        padding: var(--spacing-xs) var(--spacing-sm);
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .conocelos-title {
-        font-size: 2rem;
-    }
-
-    .animals-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: var(--spacing-sm);
-    }
-
-    .animal-info {
-        padding: var(--spacing-md);
-    }
-
-    .animal-name {
-        font-size: 1.25rem;
-    }
-
-    .detail-badge {
-        font-size: 0.75rem;
-        padding: 2px var(--spacing-sm);
-    }
-}
-
-/* Dark Mode Adjustments */
-@media (prefers-color-scheme: dark) {
-    .detail-badge {
-        background: linear-gradient(135deg,
-                rgba(255, 107, 157, 0.2) 0%,
-                rgba(78, 205, 196, 0.2) 100%);
-        border-color: rgba(255, 107, 157, 0.3);
-    }
-
-    .pagination-arrow,
-    .page-number {
-        background: var(--ion-color-dark);
-    }
-
-    .page-number:hover {
-        background: rgba(255, 107, 157, 0.1);
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 }

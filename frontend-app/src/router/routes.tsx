@@ -8,7 +8,6 @@ import { Conocelos } from '@/views/Conocelos/pages/Conocelos';
 import { AnimalDetail } from '@/views/AnimalDetail/pages/AnimalDetail';
 
 import { Castra } from '@/views/Castra/pages/Castra';
-import { DenunciaMaltrato } from '@/views/DenunciaMaltrato/pages/DenunciaMaltrato';
 import { Voluntarios } from '@/views/Voluntarios/pages/Voluntarios';
 import { HogarTransito } from '@/views/HogarTransito/pages/HogarTransito';
 
@@ -36,7 +35,6 @@ export const routes = [
 
     // Salvá vidas
     { path: '/castra', component: Castra, exact: true },
-    { path: '/denuncia-maltrato', component: DenunciaMaltrato, exact: true },
 
     // Participá
     { path: '/voluntarios', component: Voluntarios, exact: true },

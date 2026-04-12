@@ -16,11 +16,11 @@ const HeroSection: React.FC = () => {
             <div className="hero-content container">
                 <div className="hero-text">
                     <h1 className="hero-title animate-fade-in">
-                        Rescatamos Vidas,
-                        <span className="text-gradient"> Creamos Esperanza</span>
+                        No es uno más,
+                        <span className="text-gradient"> son muchos menos</span>
                     </h1>
                     <p className="hero-subtitle animate-slide-left">
-                        Cada animal merece una segunda oportunidad. Ayúdanos a darles el amor y cuidado que necesitan.
+                        Cada vida rescatada es un paso hacia un futuro distinto. En Proyecto Dumbo, entendemos que salvar a un animal es, en realidad, trabajar por muchos menos perros en las calles. Nuestra meta es transformar el abandono en esperanza, una pata a la vez.
                     </p>
 
                     <div className="hero-actions">

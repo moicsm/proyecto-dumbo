@@ -62,65 +62,69 @@ const ConocelosWeb = () => {
 
     return (
         <WebLayout>
-            <div className="conocelos-container">
+            <div className="conocelos-page">
                 {/* Header Section */}
-                <div className="conocelos-header">
-                    <h1 className="conocelos-title">Conocelos</h1>
-                    <p className="conocelos-subtitle">
-                        Encuentra a tu nuevo mejor amigo entre nuestros adorables animales esperando un hogar
-                    </p>
-                </div>
+                <header className="conocelos-header">
+                    <div className="container">
+                        <h1 className="conocelos-title">Conócelos</h1>
+                        <p className="conocelos-subtitle">
+                            Encuentra a tu nuevo mejor amigo entre nuestros adorables animales esperando un hogar
+                        </p>
+                    </div>
+                </header>
 
-                {/* Animals Grid */}
-                <div className="animals-grid">
-                    {currentAnimals.map((animal) => (
-                        <div 
-                            key={animal.id} 
-                            className="animal-card"
-                            onClick={() => history.push(`/animal/${animal.id}`)}
-                            role="button"
-                            tabIndex={0}
-                        >
-                            <div className="animal-image">
-                                {animal.image.startsWith('/') ? (
-                                    <img src={animal.image} alt={animal.name} className="animal-photo" />
-                                ) : (
-                                    <span className="animal-emoji">{animal.image}</span>
-                                )}
-                            </div>
-                            <div className="animal-info">
-                                <h3 className="animal-name">{animal.name}</h3>
-                                <div className="animal-details">
-                                    <span className="detail-badge">{animal.type}</span>
-                                    <span className="detail-badge">{animal.age}</span>
-                                    <span className="detail-badge">{animal.gender}</span>
+                <div className="container">
+                    {/* Animals Grid */}
+                    <div className="animals-grid">
+                        {currentAnimals.map((animal) => (
+                            <div 
+                                key={animal.id} 
+                                className="animal-card"
+                                onClick={() => history.push(`/animal/${animal.id}`)}
+                                role="button"
+                                tabIndex={0}
+                            >
+                                <div className="animal-image">
+                                    {animal.image.startsWith('/') ? (
+                                        <img src={animal.image} alt={animal.name} className="animal-photo" />
+                                    ) : (
+                                        <span className="animal-emoji">{animal.image}</span>
+                                    )}
+                                </div>
+                                <div className="animal-info">
+                                    <h3 className="animal-name">{animal.name}</h3>
+                                    <div className="animal-details">
+                                        <span className="detail-badge">{animal.type}</span>
+                                        <span className="detail-badge">{animal.age}</span>
+                                        <span className="detail-badge">{animal.gender}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Pagination */}
-                <div className="pagination-container">
-                    <button
-                        className="pagination-arrow"
-                        onClick={() => goToPage(currentPage - 1)}
-                        disabled={currentPage === 1}
-                    >
-                        &lt; Anterior
-                    </button>
-
-                    <div className="page-numbers">
-                        {renderPageNumbers()}
+                        ))}
                     </div>
 
-                    <button
-                        className="pagination-arrow"
-                        onClick={() => goToPage(currentPage + 1)}
-                        disabled={currentPage === TOTAL_PAGES}
-                    >
-                        Siguiente &gt;
-                    </button>
+                    {/* Pagination */}
+                    <div className="pagination-container">
+                        <button
+                            className="pagination-arrow"
+                            onClick={() => goToPage(currentPage - 1)}
+                            disabled={currentPage === 1}
+                        >
+                            &lt; Anterior
+                        </button>
+
+                        <div className="page-numbers">
+                            {renderPageNumbers()}
+                        </div>
+
+                        <button
+                            className="pagination-arrow"
+                            onClick={() => goToPage(currentPage + 1)}
+                            disabled={currentPage === TOTAL_PAGES}
+                        >
+                            Siguiente &gt;
+                        </button>
+                    </div>
                 </div>
             </div>
         </WebLayout>

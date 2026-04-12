@@ -66,11 +66,7 @@ const AnimalDetailWeb = () => {
 
                         <div className="animal-story">
                             <h3>Su Historia</h3>
-                            <p>
-                                {animal.story} 
-                                <br/><br/>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur arcu at risus vulputate, nec tempor odio eleifend. Quisque ac magna sit amet arcu blandit bibendum id a urna. Nullam ultrices, elit a sollicitudin vulputate, ipsum sapien varius eros, eu iaculis magna nisl consequat diam. 
-                            </p>
+                            <p>{animal.story}</p>
                         </div>
 
                         <div className="animal-personality">
@@ -84,9 +80,9 @@ const AnimalDetailWeb = () => {
 
                         <div className="action-buttons">
                             <IonButton 
-                                expand="block" 
                                 color="primary" 
-                                size="large"
+                                shape="round"
+                                className="adopt-btn-main"
                                 onClick={() => history.push('/quiero-adoptar')}
                             >
                                 ¡Quiero Adoptarlo!
